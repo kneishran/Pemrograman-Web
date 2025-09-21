@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Latihan CSS</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                background: #ecdbf6;
+                margin: 0;
+                padding: 0;
+                color:darkorchid;
+            }
+
+            header {
+                background:#ecdbf6;
+                padding: 20px;
+                border-bottom: 1px solid darkorchid;
+            }
+
+            header h1 {
+                margin: 0;
+                color: darkorchid;
+            }
+
+            header p {
+                margin: 5px 0 0;
+                font-size: 14px;
+                color: #403f3f;
+            }
+
+            section {
+                padding: 20px;
+            }
+
+            section h2 {
+                margin-bottom: 15px;
+            }
+
+            .card-container {
+                display: flex;
+                gap: 20px;
+                flex-wrap: wrap;
+            }
+
+            .card {
+                background: #f3e6fa;
+                border: 1px solid darkorchid;
+                border-radius: 8px;
+                width: 220px;
+                box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+                overflow: hidden;
+                transition: transform 0.2s;
+            }
+
+            .card:hover {
+                transform: scale(1.05);
+            }
+
+            .card-content {
+                padding: 10px;
+            }
+
+            .card-content h3 {
+                margin: 0;
+                color: darkorchid;
+                font-size: 18px;
+            }
+
+            .card-content p {
+                font-size: 14px;
+                color: #403f3f;
+                margin-top: 5px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <header>
+            <h1>GeeksforGeeks</h1>
+            <p>A Computer Science Portal for Geeks</p>
+        </header>
+
+        <section>
+            <h2>Portfolio</h2>
+            <div class="card-container">
+                <div class="card">
+                    <div class="card-content">
+                        <h3>HTML Tutorial</h3>
+                        <p>HTML stands for Hyper Text Markup Language.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-content">
+                        <h3>CSS Tutorial</h3>
+                        <p>CSS stands for Cascading Style Sheets.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-content">
+                        <h3>PHP Tutorial</h3>
+                        <p>PHP stands for PHP Hypertext Prepocessor.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-content">
+                        <h3>JavaScript Tutorial</h3>
+                        <p>JavaScript is a programming language primarily known as the scripting language for web pages.</p>
+                    </div>
+                </div>
+        </section>
+    </body>
+</html>
