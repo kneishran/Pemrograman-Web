@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Form Registrasi Mahasiswa</title>
+        <style>
+            body {
+                font-family: Georgia, 'Times New Roman', Times, serif;
+                background: #eadef3;
+                margin: 40px;
+            }
+
+            form {
+                background: rgba(128, 0, 128, 0.222);
+                margin: auto;
+                padding: 20px;
+                max-width: 700px;
+                border-radius: 10px;
+            }
+
+            label {
+                font-weight: bold;
+                display: block;
+                margin-top: 10px;
+            }
+
+            input, button {
+                width: 80%;
+                padding: 10px;
+                margin-bottom: 10px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+            }
+
+            button {
+                background: rgb(95, 49, 119);
+                color: white;
+                font-weight: bold;
+                cursor: pointer;
+                border: none;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div>
+            <h2>Form Registrasi Mahasiswa</h2>
+            <form id="frs" onsubmit="return validate()">
+                <label for="nama">Nama Mahasiswa</label><br>
+                <input type="text" id="nama" name="nama"><br><br>
+
+                <label for="nrp">NRP</label><br>
+                <input type="text" id="nrp" name="nrp"><br><br>
+
+                <label for="matkul">Mata Kuliah</label><br>
+                <input type="text" id="matkul" name="matkul"><br><br>
+
+                <label for="dosen">Dosen Pengampu</label><br>
+                <input type="text" id="dosen" name="dosen"><br><br>
+
+                <button type="submit">Submit</button>
+            </form>
+
+            <script language="javascript">
+                function validate(){
+                    let nama = document.getElementById("nama").value;
+                    let nrp = document.getElementById("nrp").value;
+                    let matkul = document.getElementById("matkul").value;
+                    let dosen = document.getElementById("dosen").value;
+
+                    if(nama === "" || nrp === "" || matkul === "" || dosen === ""){
+                        alert("Semua kolom harus diisi");
+                        return false;
+                    }
+
+                    alert("Berhasil registrasi");
+                    return true;
+                }
+            </script>
+        </div>
+    </body>
+</html>
