@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>List Dropdown Dinamis</title>
+
+        <style>
+            body {
+                font-family:Georgia, 'Times New Roman', Times, serif;
+                background: #eadef3;
+                margin: 40px;
+            }
+
+            select {
+                padding: 10px;
+                margin-right: 10px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+            }
+
+            h3 {
+                margin-bottom: 20px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h3>Dynamic Dropdown List</h3>
+
+        <label for="fakultas">Fakultas</label><br><br>
+        <select id="fakultas" onchange="changeDepart()">
+            <option value="">Pilih Fakultas</option>
+            <option value="FTEIC">FTEIC</option>
+            <option value="FTSPK">FT-SPK</option>
+            <option value="FDKBD">F-DKBD</option>
+            <option value="FSAD">FSAD</option>
+            <option value="FTIRS">FT-IRS</option>
+            <option value="FTK">FTK</option>
+            <option value="FKK">FKK</option>
+            <option value="FV">FV</option>
+        </select>
+        <br><br>
+
+        <label for="departemen">Departemen</label><br><br>
+        <select id="departemen">
+            <option value="">Pilih Departemen</option>
+        </select>
+
+        <script language="javascript">
+            const departemenByFakultas = {
+                FTEIC: ["Teknik Elektro", "Teknik Informatika", "Sistem Informasi", "Teknologi Informasi", "Teknik Biomedik", "Teknik Komputer"],
+                FTSPK: ["Teknik Sipil", "Arsitektur", "Teknik Lingkungan", "Perencanaan Wilayah dan Kota", "Teknik Geomatika", "Teknik Geofisika"],
+                FDKBD: ["Desain Produk Industri", "Desain Interior", "Desain Komunikasi Visual", "Manajemen Bisnis", "Studi Pembangunan"],
+                FSAD: ["Fisika", "Matematika", "Kimia", "Biologi", "Statistika", "Aktuaria"],
+                FTIRS: ["Teknik Mesin", "Teknik Kimia", "Teknik Fisika", "Teknik Sistem dan Industri", "Teknik Material dan Metalurgi", "Teknik Pangan", "Rekayasa Keselamatan Proses"],
+                FTK: ["Teknik Kelautan", "Teknik Perkapalan", "Teknik Transportasi Laut", "Teknik Sistem Perkapalan"],
+                FKK: ["Teknologi Kedokteran", "Kedokteran", "Pendidikan Profesi Dokter"],
+                FV: ["Teknik Infrastruktur Sipil", "Teknik Mesin Industri", "Teknik Elektro Otomasi", "Teknik Kimia Industri", "Teknik Instrumentasi", "Statistika Bisnis"]
+            };
+
+            function changeDepart(){
+                const fakultas = document.getElementById("fakultas").value;
+                const departemen = document.getElementById("departemen");
+
+                departemen.innerHTML = "<option value=''>Pilih Departemen</option>";
+
+                if(fakultas && departemenByFakultas[fakultas]){
+                    departemenByFakultas[fakultas].forEach(dept => {
+                        const option = document.createElement("option");
+                        option.value = dept;
+                        option.text = dept;
+                        departemen.appendChild(option);
+                    });
+                }
+            }
+        </script>
+    </body>
+</html>
