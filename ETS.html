@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Landing Page Jasa Travel</title>
+
+        <style>
+            body {
+                font-family: Arial, Helvetica, sans-serif;
+                margin: 0;
+                padding: 0;
+            }
+            header {
+                background-color: mediumpurple;
+                color: rgb(84, 7, 84);
+                padding: 20px;
+                text-align: center;
+            }
+            .hero-section {
+                background-image: url('images.jpg');
+                background-size: cover;
+                color: whitesmoke;
+                text-align: center;
+                padding: 100px 20px;
+            }
+            .benefit-section {
+                display: flex;
+                justify-content: space-around;
+                padding: 50px 20px;
+                background-color: rgb(194, 185, 240);
+            }
+            .benefit-section div {
+                flex: 1;
+                margin: 0 20px;
+                text-align: center;
+            }
+            .social-proof {
+                background-color: whitesmoke;
+                padding: 50px 20px;
+                text-align: center;
+            }
+            .product-detail {
+                display: flex;
+                justify-content: space-between;
+                padding: 50px 20px;
+                background-color: rgb(194, 185, 240);
+            }
+            .product-detail div {
+                flex: 1;
+                margin: 0 20px;
+                text-align: center;
+            }
+            .offer-section {
+                background-color: plum;
+                color: white;
+                padding: 50px 20px;
+                text-align: center;
+            }
+            .form-section {
+                background-color: whitesmoke;
+                padding: 50px 20px;
+                text-align: center;
+            }
+            form {
+                background: rgba(128, 0, 128, 0.222);
+                margin: auto;
+                padding: 20px;
+                max-width: 700px;
+                border-radius: 10px;
+            }
+            label {
+                font-weight: bold;
+                display: block;
+                margin-top: 10px;
+            }
+            input, select, textarea, button{
+                width: 80%;
+                padding: 10px;
+                margin-bottom: 10px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+            }
+            button {
+                background: mediumpurple;
+                color: white;
+                font-weight: bold;
+                cursor: pointer;
+                border: none;
+            }
+            footer {
+                background-color: mediumpurple;
+                color: white;
+                text-align: center;
+                padding: 10px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <header>
+            <h1>Jasa Kendaraan Travel Antar Kota</h1>
+            <p>Kolaborasi dengan komunitas mobil sewa untuk layanan pengantaran penumpang dan/atau paket kirim barang</p>
+        </header>
+
+        <section class="hero-section">
+            <h2>Layanan Travel Antar Kota yang Fleksibel, Cepat, dan Terpercaya</h2>
+            <p>Pesan layanan kami dan nikmati travel yang fleksibel, cepat, dan terpercaya</p>
+        </section>
+
+        <section class="benefit-section">
+            <div>
+                <h3>Fleksibilitas</h3>
+                <p>Jadwal yang sedia kapanpun dan di manapun, sesuai dengan kebutuhan Anda</p>
+            </div>
+            <div>
+                <h3>Kecepatan</h3>
+                <p>Proses pengantaran dilakukan secepat mungkin, pesanan Anda adalah prioritas kami</p>
+            </div>
+            <div>
+                <h3>Terpercaya</h3>
+                <p>Jaminan keamanan penumpang dan barang hingga sampai pada tujuan</p>
+            </div>
+        </section>
+
+        <section class="social-proof">
+            <h3>Kata Mereka</h3>
+            <p>"Layanan travel sangat bisa diandalkan dan memuaskan!" - Kamal</p>
+            <p>"Perjalanan nyaman, aman, dan sampai tepat waktu; sangat direkomendasikan!" - Teguh</p>
+        </section>
+
+        <section class="product-detail">
+            <div>
+                <h2>Mobil Travel</h2>
+                <p>Berbagai jenis mobil travel yang dapat disesuaikan dengan kebutuhan Anda, baik untuk penumpang sedikit atau banyak, dengan atau tanpa barang bawaan</p>
+            </div>
+            <div>
+                <h2>Pengiriman Barang</h2>
+                <p>Dapat melayani berbagai jenis dan ukuran barang</p>
+            </div>
+        </section>
+
+        <section class="offer-section">
+            <h2>Promo Pengguna Baru</h2>
+            <p>Dapatkan diskon 10% untuk layanan sebulan pertama Anda!</p>
+        </section>
+
+        <section class="form-section" id="form-section">
+            <h2>Pesan Layanan Kendaraan Travel Antar Kota</h2>
+            <form>
+                <label for="name">Nama:</label><br>
+                <input type="text" id="name" name="name" required><br><br>
+                
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email" required><br><br>
+                
+                <label for="phone">Nomor Telepon:</label><br>
+                <input type="tel" id="phone" name="phone" required><br><br>
+                
+                <label for="service">Pilih Layanan:</label><br>
+                <select id="service" name="service" required>
+                    <option value="travel">Travel Antar Kota</option>
+                    <option value="pengiriman">Pengiriman Barang</option>
+                </select><br><br>
+                
+                <label for="details">Detail Pesanan:</label><br>
+                <textarea id="details" name="details" rows="4" cols="50" placeholder="Masukkan detail perjalanan atau pengiriman Anda..." required></textarea><br><br>
+                
+                <button type="submit">Pesan</button>
+            </form>
+        </section>
+
+        <section class="faq-section">
+            <h3>FAQ</h3>
+            <p><strong>Q:</strong> Bagaimana cara memesan layanan?</p>
+            <p><strong>A:</strong> Anda dapat mengisi formulir di atas atau menghubungi kami melalui kontak yang tersedia</p>
+            <p><strong>Q:</strong> Apakah layanan ini aman?</p>
+            <p><strong>A:</strong> Ya, kami menjamin keamanan penumpang dan
+        </section>
+        
+        <footer>
+            <p>&copy; 2025 Jasa Kendaraan Travel Antar Kota</p>
+        </footer>
+    </body>
+</html>
